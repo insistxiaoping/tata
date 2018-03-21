@@ -9,3 +9,45 @@
 <body>
         <!-- <video src="rabbit320.webm" controls>
                 <p>Your browser doesn't support HTML5 video. Here is a <a href="rabbit320.webm">link to the video</a> instead.</p> 
+        </video> -->
+        <!-- 同上，播放的资源可以放在 video,也可以放在 video内部 -->
+        <video controls muted  poster="../小丸子/img/26.jpg">
+            <!-- poster 用于在播放之前显示的图片 -->
+                <source src="style/rabbit320.mp4" type="video/mp4" >
+                <source src="style/rabbit320.webm" type="video/webm" >
+                <p>Your browser doesn't support HTML5 video. Here is a <a href="rabbit320.mp4">link to the video</a> instead.</p>
+                <track kind="subtitles" src="style/video.vtt" srclang="en">    
+        
+       </video>
+
+       <!-- 浏览器将会检查 <source> 标签，并且播放第一个与其自身 codec 向匹配的媒体。
+        你的视频应当包括 WebM 和 MP4 两种格式，这两种在目前已经足够支持大多数平台和浏览器。
+        每个 <source> 标签页含有一个 type 属性，这个属性是可选的，但是建议你添加上这个属性
+         — 它包含了视频文件的 MIME types ，同时浏览器也会通过检查这个属性来迅速的跳过那些不支持的格式。
+        如果你没有添加 type 属性，浏览器会尝试加载每一个文件，直到找到一个能正确播放的格式，这样会消耗掉大量的时间和资源。 -->
+        
+<!-- 添加音轨文本 
+  subtitle
+       通过添加翻译字幕，来帮助那些听不懂外国语言的人们理解音频当中的内容。
+  captions
+       同步翻译对白，或是描述一些有重要信息的声音，来帮助那些不能听音频的人们理解音频中的内容。
+  timed descriptions
+       将文字转换为音频，用于服务那些有视觉障碍的人。 
+-->
+
+        <audio controls>
+                <source src="style/viper.mp3" type="audio/mp3">
+                <source src="style/viper.ogg" type="audio/ogg">
+                <p>Your browser doesn't support HTML5 audio. Here is a <a href="viper.mp3">link to the audio</a> instead.</p>
+        </audio>
+        <audio controls>
+                <source src="style/viper.mp3" type="audio/mp3">
+                <source src="style/viper.ogg" type="audio/ogg">
+                <p>Your browser doesn't support HTML5 audio. Here is a <a href="viper.mp3">link to the audio</a> instead.</p>
+        </audio>
+
+
+
+
+    </body>
+</html>
